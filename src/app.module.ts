@@ -9,8 +9,8 @@ import { AppService } from './app.service';
 
 import * as TypeOrmOptions from './config/orm';
 
-import UserResolver from './resolvers/user.resolver';
-import MessageResolver from './resolvers/message.resolver';
+import UserResolver from './user/user.resolver';
+import MessageResolver from './message/message.resolver';
 
 const graphQLImports = [UserResolver, MessageResolver];
 
@@ -22,6 +22,7 @@ const graphQLImports = [UserResolver, MessageResolver];
     GraphQLModule.forRoot({
       autoSchemaFile: 'schema.gql',
       playground: true,
+      typePaths: ['./**/*.graphql'],
     }),
   ],
   controllers: [AppController],

@@ -31,15 +31,15 @@ type Query {
 }
 
 type Mutation {
-  createUser(data: UserInput!): User!
-  createMessage(data: MessageInput!): Message!
+  createUser(data: CreateUserDto!): User!
+  createMessage(data: CreateMessageDto!): Message!
 }
 
-input UserInput {
+input CreateUserDto {
   email: String!
 }
 
-input MessageInput {
+input CreateMessageDto {
   content: String!
   userId: Float!
 }

@@ -12,7 +12,7 @@ import RepoService from 'src/repo.service';
 import Message from 'src/db/models/message.entity';
 import User from 'src/db/models/user.entity';
 
-import MessageInput from './input/message.input';
+import MessageInput from './dto/create-message.dto';
 
 @Resolver(() => Message)
 class MessageResolver {

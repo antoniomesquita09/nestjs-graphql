@@ -1,0 +1,20 @@
+type Message {
+    id: ID!
+    content: String!
+    userId: String!
+    user: User
+}
+
+input CreateMessageInput {
+  userId: ID!
+  content: String!
+}
+
+type Query {
+    getMessages: [getMessage]
+    getMessage(id: ID!): Message
+}
+
+type mutation {
+    createMessage(input: CreateMessageInput): User 
+}
